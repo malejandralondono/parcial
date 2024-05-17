@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Animes } from '../animes';
 import { AnimesService } from '../animes.service';
+import { AnimesDetail } from '../animes-detail/animes-detail';
+
+
+
 
 @Component({
   selector: 'app-animes-list',
@@ -10,6 +14,8 @@ import { AnimesService } from '../animes.service';
 export class AnimesListComponent implements OnInit {
   
   animes: Array<Animes> = [];
+  selected: Boolean = false;
+  selectedAnime!: AnimeDetail;
 
   constructor(private animesService: AnimesService) { }
 

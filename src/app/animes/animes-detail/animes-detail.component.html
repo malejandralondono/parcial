@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <p class="h3 p-3">{{ animesDetail.name }}</p>
+  <div class="row">
+    <div class="col-2">
+      <div class="thumb">
+        <img
+          class="img-fluid"
+          src="{{ animesDetail.img }}"
+          alt="{{ animesDetail.name }}"
+        />
+      </div>
+    </div>
+    <div class="col">
+      <dl>
+        <dt>Description</dt>
+        <dd>No available information</dd>
+        <dt>Rating</dt>
+        <dd>{{ animesDetail.Rating }}</dd>
+        <hr />
+        <dt>Publishing Date</dt>
+        <dd>{{ animesDetail.episode }}</dd>
+        <hr />
+        <dt class="bold">Editorial</dt>
+        <dd class="caption">{{ animesDetail.name }}</dd>
+        <hr />
+        <dt class="bold">Description</dt>
+        <dd>{{ animesDetail.description }}</dd>
+      </dl>
+    </div>
+  </div>
+ </div>

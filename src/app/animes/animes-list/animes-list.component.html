@@ -1,3 +1,9 @@
+<div *ngIf="selected">
+  <app-animes-detail [animesDetail]="selectedAnime"></app-animes-detail>
+ </div>
+ 
+ <hr />
+
 <div class="container-fluid">
   <div class="row">
       <div class="col mb-2" *ngFor="let anime of animes">
