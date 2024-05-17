@@ -10,7 +10,7 @@ import { Animes } from './animes';
 })
 export class AnimesService {
 
-private apiUrl: string = environment.baseUrl + 'animes';
+private apiUrl: string = environment.baseUrl;
 
 constructor(private http: HttpClient) { }
 
