@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Animes } from '../animes';
+import { AnimesService } from '../animes.service';
 
 @Component({
   selector: 'app-animes-list',
@@ -10,9 +11,16 @@ export class AnimesListComponent implements OnInit {
   
   animes: Array<Animes> = [];
 
-  constructor() { }
+  constructor(private animesService: AnimesService) { }
 
-  ngOnInit() {
-  }
+ getAnimes(): void {
+   this.animesService.getAnimes().subscribe((animes) => {
+     this.animes = animes;
+   });
+ }
+
+ ngOnInit() {
+   this.getAnimes();
+ }
 
 }
